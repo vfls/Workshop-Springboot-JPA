@@ -5,6 +5,7 @@ import java.util.Objects;
 
 import com.cursospring.course.entities.Order;
 import com.cursospring.course.entities.Product;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
@@ -28,6 +29,7 @@ public class OrderItemPK implements Serializable{
 	public void setOrder(Order order) {
 		this.order = order;
 	}
+	@JsonIgnore
 	public Product getProduct() {
 		return product;
 	}
